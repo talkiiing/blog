@@ -43,10 +43,7 @@ export default function Tag({ posts, tag }) {
   const title = tag[0].toUpperCase() + tag.split(' ').join('-').slice(1)
   return (
     <>
-      <TagSEO
-        title={`${tag} - ${siteMetadata.author}`}
-        description={`${tag} tags - ${siteMetadata.author}`}
-      />
+      <TagSEO title={`${tag} в /talkiiing`} description={`${tag} тэги /talkiiing`} />
       <ListLayout posts={posts} title={title} />
     </>
   )
