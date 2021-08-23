@@ -1,3 +1,6 @@
 # These are supported funding model platforms
 
-github: [talkenson, roamiiing]
+github:
+  - talkenson
+  - roamiiing
+custom: "https://www.tinkoff.ru/cf/6efhBAJ5U9u"
