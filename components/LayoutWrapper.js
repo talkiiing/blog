@@ -12,24 +12,17 @@ const LayoutWrapper = ({ children }) => {
     <SectionContainer>
       <div className="flex flex-col justify-between h-screen">
         <header className="flex items-center justify-between py-10">
-          <div>
-            <Link href="/" aria-label="Tailwind CSS Blog">
+          <div className="flex flex-row items-center">
+            <Link href="/" aria-label="/talkiiing">
               <div className="flex items-center justify-between">
                 <div className="mr-3">
                   <Logo />
                 </div>
-                {typeof siteMetadata.headerTitle === 'string' ? (
-                  <div className="hidden h-6 text-2xl font-semibold sm:block">
-                    {siteMetadata.headerTitle}
-                  </div>
-                ) : (
-                  siteMetadata.headerTitle
-                )}
               </div>
             </Link>
           </div>
           <div className="flex items-center text-base leading-5">
-            <div className="hidden sm:block">
+            <div className="hidden md:block">
               {headerNavLinks.map((link) => (
                 <Link
                   key={link.title}
@@ -40,8 +33,8 @@ const LayoutWrapper = ({ children }) => {
                 </Link>
               ))}
             </div>
-            <ThemeSwitch />
             <MobileNav />
+            <ThemeSwitch />
           </div>
         </header>
         <main className="mb-auto">{children}</main>

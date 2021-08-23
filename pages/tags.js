@@ -19,13 +19,13 @@ export default function Tags({ tags }) {
         title={`Поиск по тегам в /talkiiing`}
         description="О чем пишут в /talkenson? Здесь список тегов, которые встречаются в статьях"
       />
-      <div className="flex flex-col items-start justify-start divide-y divide-gray-200 dark:divide-gray-700 md:justify-center md:items-center md:divide-y-0 md:flex-row md:space-x-6 md:mt-24">
-        <div className="pt-6 pb-8 space-x-2 md:space-y-5">
+      <div className="border flex flex-col items-start justify-start divide-y divide-gray-200 dark:divide-gray-700 md:justify-center md:items-center md:divide-y-0 md:flex-row md:space-x-6 md:mt-24">
+        <div className="pt-6 pb-4 md:pb-0 space-x-2 md:space-y-5 md:text-right border">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 md:border-r-2 md:px-6">
-            Поиск по тегам
+            Поиск по&nbsp;тегам
           </h1>
         </div>
-        <div className="flex flex-wrap max-w-lg">
+        <div className="flex flex-wrap max-w-lg pt-4 md:pt-0 border flex-grow">
           {Object.keys(tags).length === 0 && 'Тегов не найдено'}
           {sortedTags.map((t) => {
             return (

@@ -13,7 +13,7 @@ const siteMetadata = {
   github: 'https://github.com/talkiiing',
   //twitter: 'https://twitter.com/Twitter',
   //facebook: 'https://facebook.com',
-  //youtube: 'https://youtube.com',
+  youtube: 'https://youtube.com/channel/UCnrigjTkzizmvRS-ODkyLLg',
   //linkedin: 'https://www.linkedin.com',
   locale: 'ru-RU',
   analytics: {
