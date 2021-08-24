@@ -1,5 +1,5 @@
 const siteMetadata = {
-  title: 'Team /talkiiing',
+  title: 'Блог /talkiiing',
   author: '/talkiiing',
   headerTitle: '/talkiiing',
   description: '/talkiiing out on the web. We just love coding!',
