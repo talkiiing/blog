@@ -6,7 +6,7 @@ import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/l
 import { useAmp } from 'next/amp'
 
 export const config = {
-  amp: 'hybrid',
+  amp: false, //hybrid
 }
 
 const DEFAULT_LAYOUT = 'PostLayout'
