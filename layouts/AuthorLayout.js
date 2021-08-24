@@ -12,6 +12,7 @@ export default function AuthorLayout({ children, frontMatter }) {
     linkedin,
     github,
     telegram,
+    instagram,
   } = frontMatter
 
   return (
@@ -34,6 +35,7 @@ export default function AuthorLayout({ children, frontMatter }) {
             <SocialIcon kind="linkedin" href={linkedin} />
             <SocialIcon kind="twitter" href={twitter} />
             <SocialIcon kind="telegram" href={telegram} />
+            <SocialIcon kind="instagram" href={instagram} />
           </div>
         </div>
         <div className="pt-8 pb-4 prose dark:prose-dark max-w-none xl:col-span-2">{children}</div>

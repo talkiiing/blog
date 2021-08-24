@@ -1,11 +1,13 @@
 ---
 name: Виталий Лёвкин
 avatar: /static/images/roamiiing_avatar.jpeg
-occupation: Vue.js developer, Feathers
+occupation: Vue.js developer, Node.js
 nickname: roamiiing
 email: roamiiing@roamiiing.ru
 github: https://github.com/roamiiing
 telegram: https://t.me/roamiiing
+#twitter: https://twitter.com/roamiiing
+instagram: https://instagram.com/roamiiing
 ---
 
 Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.

@@ -7,6 +7,7 @@ email: me@talkenson.ru
 twitter: https://twitter.com/talkenson_
 github: https://github.com/talkenson
 telegram: https://t.me/talkenson
+instagram: https://instagram.com/talkenson
 ---
 
 Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.
