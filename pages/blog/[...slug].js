@@ -3,8 +3,15 @@ import PageTitle from '@/components/PageTitle'
 import generateRss from '@/lib/generate-rss'
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
+import { useAmp } from 'next/amp'
+
+export const config = {
+  amp: false,
+}
 
 const DEFAULT_LAYOUT = 'PostLayout'
+
+const DEFAULT_AMP_LAYOUT = 'PostAMPLayout'
 
 export async function getStaticPaths() {
   const posts = getFiles('blog')
@@ -41,11 +48,13 @@ export async function getStaticProps({ params }) {
 export default function Blog({ post, authorDetails, prev, next }) {
   const { mdxSource, toc, frontMatter } = post
 
+  const isAmp = useAmp()
+
   return (
     <>
       {frontMatter.draft !== true ? (
         <MDXLayoutRenderer
-          layout={frontMatter.layout || DEFAULT_LAYOUT}
+          layout={isAmp ? DEFAULT_AMP_LAYOUT : frontMatter.layout || DEFAULT_LAYOUT}
           toc={toc}
           mdxSource={mdxSource}
           frontMatter={frontMatter}

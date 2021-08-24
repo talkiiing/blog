@@ -9,7 +9,7 @@ import Instagram from './instagram.svg'
 
 // Icons taken from: https://simpleicons.org/
 
-const components = {
+export const socialIcons = {
   mail: Mail,
   github: Github,
   facebook: Facebook,
@@ -23,7 +23,7 @@ const components = {
 const SocialIcon = ({ kind, href, size = 8 }) => {
   if (!href) return null
 
-  const SocialSvg = components[kind]
+  const SocialSvg = socialIcons[kind]
 
   return (
     <a

@@ -6,6 +6,10 @@ import Image from '@/components/Image'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import Comments from '@/components/comments'
+import { socialIcons } from '@/components/social-icons'
+
+const TwitterIcon = socialIcons['twitter']
+const GitHubIcon = socialIcons['github']
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 const discussUrl = (slug) =>
@@ -99,12 +103,27 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               <div className="pt-10 pb-8 text-justify prose dark:prose-dark max-w-none">
                 {children}
               </div>
-              <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
-                <Link href={discussUrl(slug)} rel="nofollow">
-                  {'Обсудить в Твиттере'}
+              <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300 flex space-x-3">
+                <Link
+                  href={discussUrl(slug)}
+                  rel="nofollow"
+                  className="group flex space-x-2 hover:text-blue-500 dark:hover:text-blue-400 "
+                >
+                  <TwitterIcon
+                    className={`fill-current text-gray-700 dark:text-gray-200 group-hover:text-blue-500 dark:group-hover:text-blue-400 h-4 w-4`}
+                  />
+                  <span>Найти статью в Твиттере</span>
                 </Link>
-                {` • `}
-                <Link href={editUrl(fileName)}>{'Эта же статья, только на Гитхабе'}</Link>
+                <span>{` • `}</span>
+                <Link
+                  href={editUrl(fileName)}
+                  className="group flex space-x-2 hover:text-blue-500 dark:hover:text-blue-400 "
+                >
+                  <span>Эта же статья, только на Гитхабе</span>
+                  <GitHubIcon
+                    className={`fill-current text-gray-700 dark:text-gray-200 group-hover:text-blue-500 dark:group-hover:text-blue-400 h-4 w-4`}
+                  />
+                </Link>
               </div>
               <Comments frontMatter={frontMatter} />
             </div>
