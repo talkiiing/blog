@@ -6,8 +6,10 @@ import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
+import { useAmp } from 'next/amp'
 
 const LayoutWrapper = ({ children }) => {
+  const isAmp = useAmp()
   return (
     <SectionContainer>
       <div className="flex flex-col justify-between h-screen">
@@ -21,21 +23,23 @@ const LayoutWrapper = ({ children }) => {
               </div>
             </Link>
           </div>
-          <div className="flex items-center text-base leading-5">
-            <div className="hidden md:block">
-              {headerNavLinks.map((link) => (
-                <Link
-                  key={link.title}
-                  href={link.href}
-                  className="p-1 font-medium text-gray-900 sm:p-4 dark:text-gray-100"
-                >
-                  {link.title}
-                </Link>
-              ))}
+          {!isAmp && (
+            <div className="flex items-center text-base leading-5">
+              <div className="hidden md:block">
+                {headerNavLinks.map((link) => (
+                  <Link
+                    key={link.title}
+                    href={link.href}
+                    className="p-1 font-medium text-gray-900 sm:p-4 dark:text-gray-100"
+                  >
+                    {link.title}
+                  </Link>
+                ))}
+              </div>
+              <MobileNav />
+              <ThemeSwitch />
             </div>
-            <MobileNav />
-            <ThemeSwitch />
-          </div>
+          )}
         </header>
         <main className="mb-auto">{children}</main>
         <Footer />

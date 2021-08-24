@@ -35,7 +35,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             <div className="space-y-1 text-center">
               <dl className="space-y-10">
                 <div>
-                  <dt className="sr-only">Published on</dt>
+                  <dt className="sr-only">Опубликован</dt>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                     <time dateTime={date}>
                       {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
@@ -52,13 +52,12 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             className="pb-8 divide-y divide-gray-200 xl:divide-y-0 dark:divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6"
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
-            <dl className="pt-6 pb-10 xl:pt-11 xl:border-b xl:border-gray-200 xl:dark:border-gray-700">
-              <dt className="sr-only">Authors</dt>
-              <dd>
-                <ul className="flex justify-center space-x-8 xl:block sm:space-x-12 xl:space-x-0 xl:space-y-8 pl-2">
-                  <li className="text-xl font-bold" key={'authors_title'}>
-                    Автор{(authorDetails.length > 1 && 'ы ') || ' '}статьи
-                  </li>
+            <dl className="pt-6 pb-6 xl:pb-10 xl:pt-11 xl:border-b xl:border-gray-200 xl:dark:border-gray-700">
+              <dd className="flex flex-col items-center xl:items-start">
+                <span className="text-lg xl:text-xl font-bold xl:pl-2 -mt-2" key={'authors_title'}>
+                  Автор{(authorDetails.length > 1 && 'ы ') || ' '}статьи
+                </span>
+                <ul className="flex justify-center mt-4 xl:mt-6 space-x-8 xl:block sm:space-x-12 xl:space-x-0 xl:space-y-8 xl:pl-2">
                   {authorDetails.map((author) => (
                     <li className="flex items-center space-x-4" key={author.name}>
                       {author.avatar && (
@@ -71,9 +70,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                         />
                       )}
                       <dl className="text-sm font-medium leading-5 whitespace-nowrap">
-                        <dt className="sr-only">Name</dt>
                         <dd className="text-gray-900 dark:text-gray-100">{author.name}</dd>
-                        <dt className="sr-only">Social</dt>
                         <dd>
                           {author.twitter ? (
                             <Link
@@ -107,21 +104,23 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                 <Link
                   href={discussUrl(slug)}
                   rel="nofollow"
-                  className="group flex space-x-2 hover:text-blue-500 dark:hover:text-blue-400 "
+                  className="group flex space-x-4 xl:space-x-2 hover:text-blue-500 dark:hover:text-blue-400 "
                 >
                   <TwitterIcon
-                    className={`fill-current text-gray-700 dark:text-gray-200 group-hover:text-blue-500 dark:group-hover:text-blue-400 h-4 w-4`}
+                    className={`fill-current text-gray-700 dark:text-gray-200 group-hover:text-blue-500 dark:group-hover:text-blue-400 
+                    h-10 w-10 xl:h-4 xl:w-4`}
                   />
-                  <span>Найти статью в Твиттере</span>
+                  <span>Упоминания в Твиттере</span>
                 </Link>
                 <span>{` • `}</span>
                 <Link
                   href={editUrl(fileName)}
-                  className="group flex space-x-2 hover:text-blue-500 dark:hover:text-blue-400 "
+                  className="group flex space-x-4 xl:space-x-2 hover:text-blue-500 dark:hover:text-blue-400 "
                 >
-                  <span>Эта же статья, только на Гитхабе</span>
+                  <span>Статья на Гитхаб</span>
                   <GitHubIcon
-                    className={`fill-current text-gray-700 dark:text-gray-200 group-hover:text-blue-500 dark:group-hover:text-blue-400 h-4 w-4`}
+                    className={`fill-current text-gray-700 dark:text-gray-200 group-hover:text-blue-500 dark:group-hover:text-blue-400 
+                    h-10 w-10 xl:h-4 xl:w-4`}
                   />
                 </Link>
               </div>
