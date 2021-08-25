@@ -4,6 +4,7 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
+import { ChevronRightIcon } from '@heroicons/react/outline'
 
 const MAX_DISPLAY = 5
 
@@ -17,7 +18,7 @@ export default function Home({ posts }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
+      <div className="divide-y divide-gray-200 dark:divide-gray-700 px-3 xl:px-0">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Свежее от нас
@@ -61,10 +62,11 @@ export default function Home({ posts }) {
                       <div className="text-base font-medium leading-6">
                         <Link
                           href={`/blog/${slug}`}
-                          className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                          className="flex space-x-1 items-center text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                           aria-label={`Read "${title}"`}
                         >
-                          Читать &rarr;
+                          <span>Читать</span>
+                          <ChevronRightIcon className="w-6 h-6" />
                         </Link>
                       </div>
                     </div>
@@ -79,10 +81,11 @@ export default function Home({ posts }) {
         <div className="flex justify-end text-base font-medium leading-6">
           <Link
             href="/blog"
-            className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+            className="flex space-x-1 items-center text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
             aria-label="all posts"
           >
-            Ко всем статьям &rarr;
+            <span>Ко всем статьям</span>
+            <ChevronRightIcon className="w-6 h-6" />
           </Link>
         </div>
       )}

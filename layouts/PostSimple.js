@@ -5,6 +5,7 @@ import { BlogSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 import formatDate from '@/lib/utils/formatDate'
 import Comments from '@/components/comments'
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/outline'
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
   const { date, title } = frontMatter
@@ -43,9 +44,10 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   <div className="pt-4 xl:pt-8">
                     <Link
                       href={`/blog/${prev.slug}`}
-                      className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                      className="flex space-x-1 items-center text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                     >
-                      &larr; {prev.title}
+                      <ChevronLeftIcon className="w-6 h-6" />
+                      <span>{prev.title}</span>
                     </Link>
                   </div>
                 )}
@@ -53,9 +55,10 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   <div className="pt-4 xl:pt-8">
                     <Link
                       href={`/blog/${next.slug}`}
-                      className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                      className="flex space-x-1 items-center text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                     >
-                      {next.title} &rarr;
+                      <span>{next.title}</span>
+                      <ChevronRightIcon className="w-6 h-6" />
                     </Link>
                   </div>
                 )}

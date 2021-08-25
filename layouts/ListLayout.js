@@ -24,7 +24,7 @@ export default function ListLayout({
 
   return (
     <>
-      <div className="divide-y">
+      <div className="divide-y px-3 xl:px-0">
         <div className="pt-6 pb-6 space-y-3 md:space-y-6">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             {title}

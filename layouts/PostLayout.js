@@ -7,6 +7,7 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import Comments from '@/components/comments'
 import { socialIcons } from '@/components/social-icons'
+import { ChevronLeftIcon } from '@heroicons/react/outline'
 
 const TwitterIcon = socialIcons['twitter']
 const GitHubIcon = socialIcons['github']
@@ -147,7 +148,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                         <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
                           Предыдущая статья
                         </h2>
-                        <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
+                        <div className="mt-2 text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
                           <Link href={`/blog/${prev.slug}`}>{prev.title}</Link>
                         </div>
                       </div>
@@ -157,7 +158,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                         <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
                           Следующая статья
                         </h2>
-                        <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
+                        <div className="mt-2 text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
                           <Link href={`/blog/${next.slug}`}>{next.title}</Link>
                         </div>
                       </div>
@@ -168,9 +169,10 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               <div className="pt-4 xl:pt-8">
                 <Link
                   href="/blog"
-                  className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                  className="flex space-x-1 items-center text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                 >
-                  &larr; Назад
+                  <ChevronLeftIcon className="w-6 h-6" />
+                  <span>Назад</span>
                 </Link>
               </div>
             </footer>
