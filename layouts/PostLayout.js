@@ -31,7 +31,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
       />
       <article>
         <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
-          <header className="pt-6 xl:pb-6">
+          <header className="pt-2 xl:pt-6 xl:pb-6">
             <div className="space-y-1 text-center">
               <dl className="space-y-10">
                 <div>
@@ -57,9 +57,9 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                 <span className="text-lg xl:text-xl font-bold xl:pl-2 -mt-2" key={'authors_title'}>
                   Автор{(authorDetails.length > 1 && 'ы ') || ' '}статьи
                 </span>
-                <ul className="flex justify-center mt-4 xl:mt-6 space-x-8 xl:block sm:space-x-12 xl:space-x-0 xl:space-y-8 xl:pl-2">
+                <ul className="flex justify-center mt-4 xl:mt-6 space-x-4 xl:block sm:space-x-12 xl:space-x-0 xl:space-y-8 xl:pl-2">
                   {authorDetails.map((author) => (
-                    <li className="flex items-center space-x-4" key={author.name}>
+                    <li className="flex items-center space-x-2" key={author.name}>
                       {author.avatar && (
                         <Image
                           src={author.avatar}

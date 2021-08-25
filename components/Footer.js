@@ -2,6 +2,7 @@ import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
 import { useAmp } from 'next/amp'
+import Tag from '@/components/Tag'
 
 export default function Footer() {
   const isAmp = useAmp()
@@ -10,19 +11,26 @@ export default function Footer() {
       <div className="flex flex-col items-center mt-16">
         {!isAmp && (
           <>
-            <div className="flex mb-3 space-x-4">
-              <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size="6" />
-              <SocialIcon kind="github" href={siteMetadata.github} size="6" />
-              <SocialIcon kind="facebook" href={siteMetadata.facebook} size="6" />
-              <SocialIcon kind="youtube" href={siteMetadata.youtube} size="6" />
-              <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size="6" />
-              <SocialIcon kind="twitter" href={siteMetadata.twitter} size="6" />
+            <div className="mb-3">
+              <Link
+                className="text-sm font-medium cursor-pointer text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                href="/tags"
+              >
+                Статьи по тегам
+              </Link>
             </div>
-
-            <div className="flex pt-2 mb-8 space-x-2 text-sm text-gray-500 dark:text-gray-400">
-              <a href="https://talkiiing.ru">
+            <div className="flex mb-2 space-x-4">
+              <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} />
+              <SocialIcon kind="github" href={siteMetadata.github} />
+              <SocialIcon kind="facebook" href={siteMetadata.facebook} />
+              <SocialIcon kind="youtube" href={siteMetadata.youtube} />
+              <SocialIcon kind="linkedin" href={siteMetadata.linkedin} />
+              <SocialIcon kind="twitter" href={siteMetadata.twitter} />
+            </div>
+            <div className="flex mt-1 mb-8 space-x-2 text-sm text-gray-500 dark:text-gray-400">
+              <Link href="https://talkiiing.ru">
                 <div>{siteMetadata.author}</div>
-              </a>
+              </Link>
               <div>{` • `}</div>
               <div>{`© ${new Date().getFullYear()}`}</div>
             </div>

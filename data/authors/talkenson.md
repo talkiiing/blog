@@ -10,8 +10,12 @@ telegram: https://t.me/talkenson
 instagram: https://instagram.com/talkenson
 ---
 
-Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.
+> Прежде чем искать порядок вокруг - наведи его в своей голове
 
-He leads the clean energy group which develops 3D air pollution-climate models, writes differential equation solvers, and manufactures titanium plated air ballons. In his free time he bakes raspberry pi.
+Веб-разработчик из центра Сибири, гитарист, хакатонщик, и капитан команды по информационной безопасности
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+- 6 лет на PHP - и это не все;
+- с 2019 года еще и React разработчик;
+- а еще 3 года параллельно Python-разработки;
+
+Люблю рефлексии, хорошее общение, и крафтовое пиво...

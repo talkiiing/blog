@@ -13,11 +13,11 @@ const LayoutWrapper = ({ children }) => {
   return (
     <SectionContainer>
       <div className="flex flex-col justify-between h-screen">
-        <header className="flex items-center justify-between py-10">
+        <header className="flex items-center justify-between py-6 px-3 xl:px-0">
           <div className="flex flex-row items-center">
             <Link href="/" aria-label="/talkiiing">
               <div className="flex items-center justify-between">
-                <div className="mr-3">
+                <div className="">
                   <Logo />
                 </div>
               </div>
@@ -36,8 +36,8 @@ const LayoutWrapper = ({ children }) => {
                   </Link>
                 ))}
               </div>
-              <MobileNav />
               <ThemeSwitch />
+              <MobileNav />
             </div>
           )}
         </header>

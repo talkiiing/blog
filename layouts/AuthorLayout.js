@@ -38,7 +38,9 @@ export default function AuthorLayout({ children, frontMatter }) {
             <SocialIcon kind="instagram" href={instagram} />
           </div>
         </div>
-        <div className="pt-8 pb-4 prose dark:prose-dark max-w-none xl:col-span-2">{children}</div>
+        <div className="pt-8 pb-4 prose dark:prose-dark text-justify max-w-none xl:col-span-2">
+          {children}
+        </div>
       </div>
     </>
   )

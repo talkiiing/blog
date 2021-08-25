@@ -8,7 +8,7 @@ const DEFAULT_LAYOUT = 'AuthorLayout'
 export async function getStaticProps() {
   const talk = await getFileBySlug('authors', ['talkenson'])
   const roam = await getFileBySlug('authors', ['roamiiing'])
-  return { props: { details: [roam, talk] } }
+  return { props: { details: [talk, roam] } }
 }
 
 export default function About({ details }) {
